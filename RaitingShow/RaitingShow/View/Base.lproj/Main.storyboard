@@ -136,7 +136,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="postsTableView" destination="0X6-4L-3Sb" id="6fb-ja-ydY"/>
-                        <segue destination="ySF-zG-xbW" kind="show" identifier="" id="tPl-EH-vm8"/>
+                        <segue destination="ySF-zG-xbW" kind="show" identifier="toPostVC" id="tPl-EH-vm8"/>
                         <segue destination="cVE-YA-2Ce" kind="show" identifier="toDetailsVC" id="v1y-kk-Vnc"/>
                     </connections>
                 </viewController>
@@ -896,7 +896,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rcR-P9-OHZ"/>
+        <segue reference="tPl-EH-vm8"/>
         <segue reference="kt9-1l-Bmo"/>
         <segue reference="4Mg-FL-9cz"/>
     </inferredMetricsTieBreakers>

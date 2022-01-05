@@ -137,9 +137,10 @@ extension HomeViewController: UITableViewDataSource {
 }
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
+        return 140
     
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MoveCell
         selectedPostImage = cell.postImageView.image
@@ -149,7 +150,7 @@ extension HomeViewController: UITableViewDelegate {
             performSegue(withIdentifier: "toPostVC", sender: self)
         }else {
             performSegue(withIdentifier: "toDetailsVC", sender: self)
-            
+
         }
     }
 }
