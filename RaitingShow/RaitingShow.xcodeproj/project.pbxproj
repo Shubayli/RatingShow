@@ -116,6 +116,7 @@
 		D16CC35627844B8F005A9D73 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D16CC37227844F0D005A9D73 /* MoveCell.swift */,
 				D102E8CF278488F900008923 /* MovieTableViewCell.swift */,
 				D16CC34427844B07005A9D73 /* Main.storyboard */,
 			);
@@ -136,7 +137,6 @@
 			children = (
 				D16CC37427844F0D005A9D73 /* API.swift */,
 				D16CC37527844F0D005A9D73 /* Move.swift */,
-				D16CC37227844F0D005A9D73 /* MoveCell.swift */,
 				D16CC37127844F0D005A9D73 /* MovieViewModel.swift */,
 			);
 			path = Model;
