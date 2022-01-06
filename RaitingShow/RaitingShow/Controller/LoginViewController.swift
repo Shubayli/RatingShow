@@ -9,12 +9,21 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
+//    ========================================== localiztion
+    @IBOutlet weak var emaiLable: UILabel!
+    @IBOutlet weak var passwordLable: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var regesterButton: UIButton!
+    //    ==========================================
     var activityIndicator = UIActivityIndicatorView()
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        emaiLable.text = "email".localized
+        passwordLable.text = "password".localized
+        loginButton.setTitle("loginVCLogin".localized, for: .normal)
+        regesterButton.setTitle("regesterVCLogin".localized, for: .normal)
         // Do any additional setup after loading the view.
     }
     @IBAction func handleLogin(_ sender: Any) {

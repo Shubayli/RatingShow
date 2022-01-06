@@ -9,9 +9,12 @@ import UIKit
 
 class LandingViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var regesterButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loginButton.setTitle("login".localized, for: .normal)
+        regesterButton.setTitle("regester".localized, for: .normal)
         // Do any additional setup after loading the view.
     }
     

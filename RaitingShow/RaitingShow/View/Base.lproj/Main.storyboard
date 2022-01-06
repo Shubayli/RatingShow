@@ -123,7 +123,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0ck-39-EIX">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="2pG-aD-uF5">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" image="power" catalog="system" id="2pG-aD-uF5">
+                            <color key="tintColor" red="0.7460736147" green="0.210291951" blue="0.16585275390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="handleLogout:" destination="vhZ-Xm-2ej" id="p7d-qO-7aE"/>
                             </connections>
@@ -149,11 +150,11 @@
             <objects>
                 <viewController id="8hp-fs-Xwz" customClass="LoginViewController" customModule="RaitingShow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oQK-t8-uRo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gw1-WT-jyP">
-                                <rect key="frame" x="20" y="168" width="374" height="306"/>
+                                <rect key="frame" x="20" y="80" width="374" height="306"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9t-a6-Q9m">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -244,8 +245,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="scY-JQ-MlS"/>
                     <connections>
+                        <outlet property="emaiLable" destination="C9t-a6-Q9m" id="cgm-xO-hvF"/>
                         <outlet property="emailTextField" destination="Mus-p0-4fj" id="Bcs-VN-K4T"/>
+                        <outlet property="loginButton" destination="xjn-uC-6ID" id="fe2-fl-wYV"/>
+                        <outlet property="passwordLable" destination="07H-jC-wNe" id="8XR-Mk-erj"/>
                         <outlet property="passwordTextField" destination="94G-7Q-gGn" id="FXe-ul-HpZ"/>
+                        <outlet property="regesterButton" destination="dTl-Y4-1nM" id="DFL-ow-Jzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4N-6l-W9d" sceneMemberID="firstResponder"/>
@@ -308,6 +313,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2bn-93-T80"/>
+                    <connections>
+                        <outlet property="loginButton" destination="aFZ-fn-1YW" id="L7L-db-M0P"/>
+                        <outlet property="regesterButton" destination="bho-rg-8zR" id="s5B-In-WgU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkO-SB-gql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -318,11 +327,11 @@
             <objects>
                 <viewController id="cF2-Hs-I9m" customClass="RegisterViewController" customModule="RaitingShow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgL-gD-N8D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOr-92-jCt">
-                                <rect key="frame" x="20" y="118" width="374" height="498"/>
+                                <rect key="frame" x="20" y="30" width="374" height="498"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-Mp-rG2">
                                         <rect key="frame" x="129.5" y="1.5" width="115" height="113"/>
@@ -463,10 +472,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="f32-Zd-jPB"/>
                     <connections>
+                        <outlet property="RepasswordLable" destination="dOn-IE-d9q" id="Zoj-aa-P8t"/>
                         <outlet property="confirmPasswordTextField" destination="wwd-L8-djV" id="bFZ-vg-sTf"/>
+                        <outlet property="emailLable" destination="YQz-0W-olj" id="dn0-uB-14L"/>
                         <outlet property="emailTextField" destination="rzL-kp-0WO" id="qdl-Op-u5c"/>
+                        <outlet property="loginButton" destination="AoG-tp-BaX" id="GD4-om-pQs"/>
+                        <outlet property="nameLable" destination="HZ7-3b-1hK" id="vUr-Fq-0mh"/>
                         <outlet property="nameTextField" destination="TqQ-0f-O8y" id="53T-g6-Efp"/>
+                        <outlet property="passwordLable" destination="npq-hf-x5o" id="eWS-7R-wse"/>
                         <outlet property="passwordTextField" destination="nWQ-UB-7Og" id="AhP-HP-sS1"/>
+                        <outlet property="regesterButton" destination="8Oc-rW-aOJ" id="lsp-ax-wL0"/>
                         <outlet property="userImageView" destination="UzD-Mp-rG2" id="591-iI-mgu"/>
                     </connections>
                 </viewController>
@@ -766,10 +781,13 @@
                     <navigationItem key="navigationItem" id="9Ec-SW-hfz"/>
                     <connections>
                         <outlet property="actionButton" destination="dm0-ys-iQC" id="L8G-bP-piL"/>
+                        <outlet property="descreptionLable" destination="xWA-Ng-oHx" id="qDZ-el-Lx6"/>
                         <outlet property="postDescriptionTextField" destination="zhh-5U-rKF" id="9pt-sb-Sfy"/>
                         <outlet property="postImageView" destination="3K4-dl-5NI" id="up7-m8-rs4"/>
                         <outlet property="postTitleTextField" destination="caG-5o-G1l" id="8eX-rl-Gos"/>
+                        <outlet property="raitingLable" destination="Pi2-WL-GXr" id="kjV-cM-d9t"/>
                         <outlet property="raitingTextFaield" destination="sTp-3a-IS0" id="GIJ-VN-7nr"/>
+                        <outlet property="titleLable" destination="Is9-AS-KpU" id="iIH-2b-hI1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iA4-v1-Cup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -884,10 +902,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="WnR-ss-3KX"/>
                     <connections>
+                        <outlet property="descriptionLable" destination="efY-G8-T71" id="CfU-yw-pis"/>
                         <outlet property="postDescriptionLabel" destination="ahx-vw-v6h" id="RBh-MX-NdL"/>
                         <outlet property="postImageView" destination="xEr-eu-hGj" id="nZf-wB-VMo"/>
                         <outlet property="postTitleLabel" destination="eNl-MQ-Wpd" id="8nK-Lz-vHp"/>
                         <outlet property="raitingLabel" destination="gqO-Vl-ACe" id="cyw-zs-ZZG"/>
+                        <outlet property="titlLable" destination="XYE-dW-Ogn" id="gKw-R8-gFh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qS-Hy-YYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -896,15 +916,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tPl-EH-vm8"/>
-        <segue reference="kt9-1l-Bmo"/>
-        <segue reference="4Mg-FL-9cz"/>
+        <segue reference="rcR-P9-OHZ"/>
+        <segue reference="Quy-nT-0RD"/>
+        <segue reference="PUD-gm-NCN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="move.3d" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
+        <image name="power" catalog="system" width="128" height="124"/>
         <image name="ratedStar" width="250" height="236"/>
         <namedColor name="Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

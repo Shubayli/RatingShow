@@ -8,6 +8,14 @@
 import UIKit
 import Firebase
 class RegisterViewController: UIViewController {
+    
+    @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var emailLable: UILabel!
+    @IBOutlet weak var passwordLable: UILabel!
+    @IBOutlet weak var RepasswordLable: UILabel!
+    @IBOutlet weak var regesterButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+//    ========================================
     let imagePickerController = UIImagePickerController()
     var activityIndicator = UIActivityIndicatorView()
     @IBOutlet weak var userImageView: UIImageView! {
@@ -29,6 +37,12 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLable.text = "Name".localized
+        emailLable.text = "EmailVc".localized
+        passwordLable.text = "passVc".localized
+        RepasswordLable.text = "Repass".localized
+        regesterButton.setTitle("regVC".localized, for: .normal)
+        loginButton.setTitle("logVC".localized, for: .normal)
         imagePickerController.delegate = self
         // Do any additional setup after loading the view.
     }

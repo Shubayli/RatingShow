@@ -10,6 +10,10 @@ import Firebase
 class PostViewController: UIViewController {
     var selectedPost:Post?
     var selectedPostImage:UIImage?
+    
+    @IBOutlet weak var raitingLable: UILabel!
+    @IBOutlet weak var descreptionLable: UILabel!
+    @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var postImageView: UIImageView!{
         didSet {
@@ -24,17 +28,21 @@ class PostViewController: UIViewController {
     let activityIndicator = UIActivityIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        raitingLable.text = "raiting".localized
+        descreptionLable.text = "descraition".localized
+        titleLable.text = "title".localized
+        actionButton.setTitle("action".localized, for: .normal)
         if let selectedPost = selectedPost,
         let selectedImage = selectedPostImage{
             postTitleTextField.text = selectedPost.title
             raitingTextFaield.text = selectedPost.raiting
             postDescriptionTextField.text = selectedPost.description
             postImageView.image = selectedImage
-            actionButton.setTitle("Update Post", for: .normal)
+            actionButton.setTitle("UpdatePost".localized, for: .normal)
             let deleteBarButton = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(handleDelete))
             self.navigationItem.rightBarButtonItem = deleteBarButton
         }else {
-            actionButton.setTitle("Add Post", for: .normal)
+            actionButton.setTitle("AddPost".localized, for: .normal)
             self.navigationItem.rightBarButtonItem = nil
             
         }

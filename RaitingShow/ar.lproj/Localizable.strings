@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  RaitingShow
+
+  Created by ماك بوك on 03/06/1443 AH.
+  
+*/
+"login" = "تسجيل الدخول";
+"regester" = "حساب جديد";
+"email" = "الايميل";
+"password" = "كلمة السر";
+"loginVCLogin" = "تسجيل الدخول";
+"regesterVCLogin" = "حساب جديد";
+//\\\\
+"Name" = "الاسم";
+"EmailVc" = "الايميل";
+"passVc" = "كلمة السر";
+"Repass" = "اعد كلمة السر";
+"regVC" = "دخول";
+"logVC" = "لدي حساب";
+//\\\
+
+"raiting" = "التقييم";
+"descraition" = "الوصف";
+"title" = "العنوان";
+"action" = "ارسال";
+"titleVC" = "العنوان";
+"desVC" = "الوصف";
+"UpdatePost" = "تعديل";
+"AddPost" = "ارسال";

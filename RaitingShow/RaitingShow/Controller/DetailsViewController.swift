@@ -14,8 +14,14 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var raitingLabel: UILabel!
+    
+    @IBOutlet weak var titlLable: UILabel!
+    
+    @IBOutlet weak var descriptionLable: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        titlLable.text = "titleVC".localized
+        descriptionLable.text = "desVC".localized
         if let selectedPost = selectedPost,
         let selectedImage = selectedPostImage{
             postTitleLabel.text = selectedPost.title
