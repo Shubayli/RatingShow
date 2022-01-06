@@ -150,11 +150,11 @@
             <objects>
                 <viewController id="8hp-fs-Xwz" customClass="LoginViewController" customModule="RaitingShow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oQK-t8-uRo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gw1-WT-jyP">
-                                <rect key="frame" x="20" y="80" width="374" height="306"/>
+                                <rect key="frame" x="20" y="168" width="374" height="306"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9t-a6-Q9m">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -299,11 +299,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Mc-25-Wx5">
+                                <rect key="frame" x="16" y="98" width="382" height="32"/>
+                                <segments>
+                                    <segment title="AR"/>
+                                    <segment title="EN"/>
+                                </segments>
+                                <connections>
+                                    <action selector="languageChangerPressed:" destination="KIK-3u-fDn" eventType="valueChanged" id="NPn-7a-iQn"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tHi-cy-KL9"/>
                         <color key="backgroundColor" name="Color"/>
                         <constraints>
+                            <constraint firstItem="5Mc-25-Wx5" firstAttribute="leading" secondItem="tHi-cy-KL9" secondAttribute="leading" constant="16" id="142-GZ-Xcv"/>
                             <constraint firstItem="9JL-1p-6ei" firstAttribute="top" secondItem="tHi-cy-KL9" secondAttribute="top" constant="70" id="4Hh-1F-yOa"/>
+                            <constraint firstItem="tHi-cy-KL9" firstAttribute="trailing" secondItem="5Mc-25-Wx5" secondAttribute="trailing" constant="16" id="95D-fn-VXb"/>
+                            <constraint firstItem="5Mc-25-Wx5" firstAttribute="top" secondItem="tHi-cy-KL9" secondAttribute="top" constant="10" id="Bk9-Qz-zaP"/>
                             <constraint firstItem="9JL-1p-6ei" firstAttribute="leading" secondItem="tHi-cy-KL9" secondAttribute="leading" constant="20" id="DE9-uL-DKj"/>
                             <constraint firstItem="tHi-cy-KL9" firstAttribute="trailing" secondItem="9JL-1p-6ei" secondAttribute="trailing" constant="20" id="Dn9-V9-oRd"/>
                             <constraint firstItem="tHi-cy-KL9" firstAttribute="trailing" secondItem="Rqm-W2-eOR" secondAttribute="trailing" constant="20" id="NnB-dG-9Il"/>
@@ -314,6 +327,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2bn-93-T80"/>
                     <connections>
+                        <outlet property="languageSegmentControl" destination="5Mc-25-Wx5" id="NKr-ol-62B"/>
                         <outlet property="loginButton" destination="aFZ-fn-1YW" id="L7L-db-M0P"/>
                         <outlet property="regesterButton" destination="bho-rg-8zR" id="s5B-In-WgU"/>
                     </connections>
@@ -327,11 +341,11 @@
             <objects>
                 <viewController id="cF2-Hs-I9m" customClass="RegisterViewController" customModule="RaitingShow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgL-gD-N8D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOr-92-jCt">
-                                <rect key="frame" x="20" y="30" width="374" height="498"/>
+                                <rect key="frame" x="20" y="118" width="374" height="498"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-Mp-rG2">
                                         <rect key="frame" x="129.5" y="1.5" width="115" height="113"/>
@@ -917,8 +931,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rcR-P9-OHZ"/>
-        <segue reference="Quy-nT-0RD"/>
-        <segue reference="PUD-gm-NCN"/>
+        <segue reference="kt9-1l-Bmo"/>
+        <segue reference="4Mg-FL-9cz"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
