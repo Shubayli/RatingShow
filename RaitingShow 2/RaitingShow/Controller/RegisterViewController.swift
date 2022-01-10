@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var regesterButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
 //    ========================================
+    @IBOutlet weak var errorLable: UILabel!
     let imagePickerController = UIImagePickerController()
     var activityIndicator = UIActivityIndicatorView()
     @IBOutlet weak var userImageView: UIImageView! {
@@ -32,9 +33,18 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField! {
+        didSet {
+            passwordTextField.isSecureTextEntry = true
+        }
+    }
     
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!{
+        didSet {
+            confirmPasswordTextField.isSecureTextEntry = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLable.text = "Name".localized
@@ -57,9 +67,13 @@ class RegisterViewController: UIViewController {
            password == confirmPassword {
             Activity.showIndicator(parentView: self.view, childView: activityIndicator)
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let error = error {
-                    print("Registration Auth Error",error.localizedDescription)
-                }
+                if error == nil {
+                                    print("Login succesfully")
+                                }else{
+                                    print(error?.localizedDescription as Any)
+                                    Activity.removeIndicator(parentView: self.view, childView: self.activityIndicator)
+                                    self.errorLable.text = error?.localizedDescription
+                                }
                 if let authResult = authResult {
                     let storageRef = Storage.storage().reference(withPath: "users/\(authResult.user.uid)")
                     let uploadMeta = StorageMetadata.init()
@@ -96,6 +110,12 @@ class RegisterViewController: UIViewController {
                         }
                     }
                 }
+            }
+        }else {
+            if passwordTextField.text != confirmPasswordTextField.text!{
+                errorLable.text = "Password uncorrect"
+            }else{
+                errorLable.text = "Empty"
             }
         }
         
