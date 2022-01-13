@@ -6,5 +6,6 @@ usre stories:
 - ueser can update his move rating 
 - user can see all the other move rating that has been published by othe painter,without access of "update & delete".
 
-
+## Demo
 ![](light.gif)
+![](dark.gif)
