@@ -21,6 +21,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         emaiLable.text = "email".localized
         passwordLable.text = "password".localized
         loginButton.setTitle("loginVCLogin".localized, for: .normal)
@@ -52,4 +57,10 @@ class LoginViewController: UIViewController {
     }
 
     
+}
+extension LoginViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
 }

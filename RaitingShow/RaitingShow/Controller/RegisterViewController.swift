@@ -47,6 +47,13 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+        view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:))))
+
         nameLable.text = "Name".localized
         emailLable.text = "EmailVc".localized
         passwordLable.text = "passVc".localized
@@ -54,6 +61,7 @@ class RegisterViewController: UIViewController {
         regesterButton.setTitle("regVC".localized, for: .normal)
         loginButton.setTitle("logVC".localized, for: .normal)
         imagePickerController.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func handleRegister(_ sender: Any) {
@@ -161,4 +169,10 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+}
+extension RegisterViewController: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
 }
