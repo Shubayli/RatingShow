@@ -34,8 +34,8 @@ but I learn as develper how to cearate application for what user need !
 as a user I can see my result in Arabic,English
 
 
-**########## The Features and API ###############
-**
+## The Features and API
+
 The features of this app is using API that show the update of raiting movies.
 for this version 1.0
 
