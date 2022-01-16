@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         getPosts()
         // Do any additional setup after loading the view.
+        
     }
     func getPosts() {
         let ref = Firestore.firestore()
